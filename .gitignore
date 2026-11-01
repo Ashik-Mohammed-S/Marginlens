@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+data/
+*.duckdb
+*.duckdb.wal
+logs/
+target/
+dbt_packages/
+.DS_Store
+Thumbs.db
+*.pbix
+*.pdf
