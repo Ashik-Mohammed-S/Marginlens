@@ -21,7 +21,7 @@ jsonschema-specifications==2025.9.1
 jsonschema==4.26.0
 leather==0.4.1
 markupsafe==3.0.4
-mashumaro==3.17
+mashumaro==3.23
 metricflow==0.213.0
 more-itertools==10.8.0
 networkx==3.7
