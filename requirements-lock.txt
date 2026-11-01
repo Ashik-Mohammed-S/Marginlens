@@ -13,7 +13,7 @@ dbt-duckdb==1.10.0
 dbt-extractor==0.6.0
 dbt-protos==1.0.615
 deepdiff==8.6.2
-duckdb==1.4.3
+duckdb==2.0.0
 importlib-metadata==10.1.0
 isodate==0.7.2
 jinja2==3.1.6
