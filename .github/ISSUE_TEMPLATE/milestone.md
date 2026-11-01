@@ -1,19 +1,15 @@
 ---
-name: Learning and delivery milestone
-about: Track implementation, validation, and learning separately
+name: Project milestone
+about: Track project deliverables and validation
 title: 'M#: '
 ---
 
 ## Business outcome
 
-## Build checklist
+## Deliverables
 - [ ] Implementation complete
 - [ ] Relevant validation passed and evidence linked
 - [ ] Documentation updated
-
-## Learning checklist
-- [ ] Explain key decisions in own words
-- [ ] Complete exercise and review
 
 ## Acceptance criteria
 
