@@ -1,0 +1,472 @@
+{
+  "meta": {
+    "name": "MarginLens",
+    "synthetic": true,
+    "seed": 20261102,
+    "start": "2025-01-01",
+    "end": "2026-10-31",
+    "raw_rows": 37062,
+    "accepted_rows": 37060,
+    "rejected_rows": 2,
+    "fingerprint": "2f16e5e96d0b411d76d122405cf32857409c84f814bddae35fd8ea8fbc71cd6c",
+    "raw_revenue_cents": 229750427,
+    "accepted_revenue_cents": 229739394,
+    "rejected_revenue_cents": 11033
+  },
+  "checks": [
+    {
+      "name": "Raw revenue = accepted + quarantined",
+      "status": "PASS",
+      "count": 0,
+      "detail": "Exact integer-cent reconciliation; rejected records remain auditable."
+    },
+    {
+      "name": "Mart grain is unique",
+      "status": "PASS",
+      "count": 0,
+      "detail": "One row per transaction and line."
+    },
+    {
+      "name": "Quarantined source rows",
+      "status": "WARN",
+      "count": 2,
+      "detail": "One duplicate and one unknown-store record."
+    },
+    {
+      "name": "Missing cost",
+      "status": "WARN",
+      "count": 18,
+      "detail": "Gross profit suppressed for incomplete groups; known-cost profit shown separately."
+    },
+    {
+      "name": "Ambiguous contract matches",
+      "status": "WARN",
+      "count": 30,
+      "detail": "Sale preserved once; expected price and shortfall remain unknown."
+    },
+    {
+      "name": "Unmatched contracts",
+      "status": "WARN",
+      "count": 61,
+      "detail": "Revenue retained; contract coverage disclosed."
+    },
+    {
+      "name": "Historical snapshot",
+      "status": "INFO",
+      "count": 0,
+      "detail": "Data ends 2026-10-31. This demo is not a live feed."
+    }
+  ],
+  "forecast": {
+    "scope": "All stores; gross sale units, excluding returns",
+    "selected": "weekday_trend",
+    "validation_wape": {
+      "seasonal": 0.04852730188201536,
+      "weekday_trend": 0.037326306809801583
+    },
+    "test_wape": {
+      "seasonal": 0.038323829730804934,
+      "weekday_trend": 0.022631398071744493
+    },
+    "test_start": "2026-10-04",
+    "test_end": "2026-10-31",
+    "interval": "Empirical 90th-percentile absolute validation error; nominal 90%, not guaranteed coverage",
+    "test_interval_coverage": 0.9642857142857143,
+    "history": [
+      {
+        "date": "2026-09-06",
+        "units": 336
+      },
+      {
+        "date": "2026-09-07",
+        "units": 251
+      },
+      {
+        "date": "2026-09-08",
+        "units": 253
+      },
+      {
+        "date": "2026-09-09",
+        "units": 246
+      },
+      {
+        "date": "2026-09-10",
+        "units": 244
+      },
+      {
+        "date": "2026-09-11",
+        "units": 258
+      },
+      {
+        "date": "2026-09-12",
+        "units": 327
+      },
+      {
+        "date": "2026-09-13",
+        "units": 326
+      },
+      {
+        "date": "2026-09-14",
+        "units": 249
+      },
+      {
+        "date": "2026-09-15",
+        "units": 243
+      },
+      {
+        "date": "2026-09-16",
+        "units": 240
+      },
+      {
+        "date": "2026-09-17",
+        "units": 242
+      },
+      {
+        "date": "2026-09-18",
+        "units": 256
+      },
+      {
+        "date": "2026-09-19",
+        "units": 324
+      },
+      {
+        "date": "2026-09-20",
+        "units": 322
+      },
+      {
+        "date": "2026-09-21",
+        "units": 253
+      },
+      {
+        "date": "2026-09-22",
+        "units": 251
+      },
+      {
+        "date": "2026-09-23",
+        "units": 246
+      },
+      {
+        "date": "2026-09-24",
+        "units": 256
+      },
+      {
+        "date": "2026-09-25",
+        "units": 236
+      },
+      {
+        "date": "2026-09-26",
+        "units": 313
+      },
+      {
+        "date": "2026-09-27",
+        "units": 328
+      },
+      {
+        "date": "2026-09-28",
+        "units": 266
+      },
+      {
+        "date": "2026-09-29",
+        "units": 244
+      },
+      {
+        "date": "2026-09-30",
+        "units": 252
+      },
+      {
+        "date": "2026-10-01",
+        "units": 253
+      },
+      {
+        "date": "2026-10-02",
+        "units": 234
+      },
+      {
+        "date": "2026-10-03",
+        "units": 309
+      },
+      {
+        "date": "2026-10-04",
+        "units": 309
+      },
+      {
+        "date": "2026-10-05",
+        "units": 258
+      },
+      {
+        "date": "2026-10-06",
+        "units": 245
+      },
+      {
+        "date": "2026-10-07",
+        "units": 240
+      },
+      {
+        "date": "2026-10-08",
+        "units": 250
+      },
+      {
+        "date": "2026-10-09",
+        "units": 236
+      },
+      {
+        "date": "2026-10-10",
+        "units": 320
+      },
+      {
+        "date": "2026-10-11",
+        "units": 320
+      },
+      {
+        "date": "2026-10-12",
+        "units": 244
+      },
+      {
+        "date": "2026-10-13",
+        "units": 247
+      },
+      {
+        "date": "2026-10-14",
+        "units": 246
+      },
+      {
+        "date": "2026-10-15",
+        "units": 243
+      },
+      {
+        "date": "2026-10-16",
+        "units": 251
+      },
+      {
+        "date": "2026-10-17",
+        "units": 319
+      },
+      {
+        "date": "2026-10-18",
+        "units": 325
+      },
+      {
+        "date": "2026-10-19",
+        "units": 250
+      },
+      {
+        "date": "2026-10-20",
+        "units": 249
+      },
+      {
+        "date": "2026-10-21",
+        "units": 249
+      },
+      {
+        "date": "2026-10-22",
+        "units": 250
+      },
+      {
+        "date": "2026-10-23",
+        "units": 257
+      },
+      {
+        "date": "2026-10-24",
+        "units": 321
+      },
+      {
+        "date": "2026-10-25",
+        "units": 320
+      },
+      {
+        "date": "2026-10-26",
+        "units": 259
+      },
+      {
+        "date": "2026-10-27",
+        "units": 238
+      },
+      {
+        "date": "2026-10-28",
+        "units": 245
+      },
+      {
+        "date": "2026-10-29",
+        "units": 248
+      },
+      {
+        "date": "2026-10-30",
+        "units": 262
+      },
+      {
+        "date": "2026-10-31",
+        "units": 340
+      }
+    ],
+    "future": [
+      {
+        "date": "2026-11-01",
+        "units": 325.8,
+        "lower": 304.5,
+        "upper": 347.1
+      },
+      {
+        "date": "2026-11-02",
+        "units": 258.5,
+        "lower": 237.2,
+        "upper": 279.8
+      },
+      {
+        "date": "2026-11-03",
+        "units": 250.3,
+        "lower": 229.0,
+        "upper": 271.6
+      },
+      {
+        "date": "2026-11-04",
+        "units": 250.6,
+        "lower": 229.3,
+        "upper": 271.9
+      },
+      {
+        "date": "2026-11-05",
+        "units": 253.4,
+        "lower": 232.1,
+        "upper": 274.7
+      },
+      {
+        "date": "2026-11-06",
+        "units": 257.2,
+        "lower": 235.9,
+        "upper": 278.5
+      },
+      {
+        "date": "2026-11-07",
+        "units": 332.4,
+        "lower": 311.1,
+        "upper": 353.7
+      },
+      {
+        "date": "2026-11-08",
+        "units": 325.8,
+        "lower": 304.5,
+        "upper": 347.1
+      },
+      {
+        "date": "2026-11-09",
+        "units": 258.5,
+        "lower": 237.2,
+        "upper": 279.8
+      },
+      {
+        "date": "2026-11-10",
+        "units": 250.3,
+        "lower": 229.0,
+        "upper": 271.6
+      },
+      {
+        "date": "2026-11-11",
+        "units": 250.6,
+        "lower": 229.3,
+        "upper": 271.9
+      },
+      {
+        "date": "2026-11-12",
+        "units": 253.4,
+        "lower": 232.1,
+        "upper": 274.7
+      },
+      {
+        "date": "2026-11-13",
+        "units": 257.2,
+        "lower": 235.9,
+        "upper": 278.5
+      },
+      {
+        "date": "2026-11-14",
+        "units": 332.4,
+        "lower": 311.1,
+        "upper": 353.7
+      },
+      {
+        "date": "2026-11-15",
+        "units": 325.8,
+        "lower": 304.5,
+        "upper": 347.1
+      },
+      {
+        "date": "2026-11-16",
+        "units": 258.5,
+        "lower": 237.2,
+        "upper": 279.8
+      },
+      {
+        "date": "2026-11-17",
+        "units": 250.3,
+        "lower": 229.0,
+        "upper": 271.6
+      },
+      {
+        "date": "2026-11-18",
+        "units": 250.6,
+        "lower": 229.3,
+        "upper": 271.9
+      },
+      {
+        "date": "2026-11-19",
+        "units": 253.4,
+        "lower": 232.1,
+        "upper": 274.7
+      },
+      {
+        "date": "2026-11-20",
+        "units": 257.2,
+        "lower": 235.9,
+        "upper": 278.5
+      },
+      {
+        "date": "2026-11-21",
+        "units": 332.4,
+        "lower": 311.1,
+        "upper": 353.7
+      },
+      {
+        "date": "2026-11-22",
+        "units": 325.8,
+        "lower": 304.5,
+        "upper": 347.1
+      },
+      {
+        "date": "2026-11-23",
+        "units": 258.5,
+        "lower": 237.2,
+        "upper": 279.8
+      },
+      {
+        "date": "2026-11-24",
+        "units": 250.3,
+        "lower": 229.0,
+        "upper": 271.6
+      },
+      {
+        "date": "2026-11-25",
+        "units": 250.6,
+        "lower": 229.3,
+        "upper": 271.9
+      },
+      {
+        "date": "2026-11-26",
+        "units": 253.4,
+        "lower": 232.1,
+        "upper": 274.7
+      },
+      {
+        "date": "2026-11-27",
+        "units": 257.2,
+        "lower": 235.9,
+        "upper": 278.5
+      },
+      {
+        "date": "2026-11-28",
+        "units": 332.4,
+        "lower": 311.1,
+        "upper": 353.7
+      }
+    ]
+  }
+}

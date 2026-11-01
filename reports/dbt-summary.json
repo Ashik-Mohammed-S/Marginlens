@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "unique_id": "model.marginlens.dim_products",
+      "status": "success",
+      "execution_time": 0.1263430118560791
+    },
+    {
+      "unique_id": "model.marginlens.dim_stores",
+      "status": "success",
+      "execution_time": 0.12032675743103027
+    },
+    {
+      "unique_id": "model.marginlens.stg_contracts",
+      "status": "success",
+      "execution_time": 0.11346721649169922
+    },
+    {
+      "unique_id": "test.marginlens.not_null_dim_products_product_id.c8aba288d1",
+      "status": "pass",
+      "execution_time": 0.04611539840698242
+    },
+    {
+      "unique_id": "test.marginlens.unique_dim_products_product_id.ef7b2a9985",
+      "status": "pass",
+      "execution_time": 0.024417877197265625
+    },
+    {
+      "unique_id": "test.marginlens.not_null_dim_stores_store_id.e93781bc63",
+      "status": "pass",
+      "execution_time": 0.021942138671875
+    },
+    {
+      "unique_id": "test.marginlens.unique_dim_stores_store_id.0479724a85",
+      "status": "pass",
+      "execution_time": 0.01905083656311035
+    },
+    {
+      "unique_id": "model.marginlens.stg_sales",
+      "status": "success",
+      "execution_time": 0.2621157169342041
+    },
+    {
+      "unique_id": "model.marginlens.fct_sales",
+      "status": "success",
+      "execution_time": 0.08702921867370605
+    },
+    {
+      "unique_id": "test.marginlens.no_invented_values",
+      "status": "pass",
+      "execution_time": 0.028519868850708008
+    },
+    {
+      "unique_id": "test.marginlens.not_null_fct_sales_revenue_cents.eb313ce088",
+      "status": "pass",
+      "execution_time": 0.029518604278564453
+    },
+    {
+      "unique_id": "test.marginlens.not_null_fct_sales_transaction_id.c2eea1d776",
+      "status": "pass",
+      "execution_time": 0.026571035385131836
+    },
+    {
+      "unique_id": "test.marginlens.relationships_fct_sales_product_id__product_id__ref_dim_products_.a7d0443098",
+      "status": "pass",
+      "execution_time": 0.023806333541870117
+    },
+    {
+      "unique_id": "test.marginlens.relationships_fct_sales_store_id__store_id__ref_dim_stores_.455de3734d",
+      "status": "pass",
+      "execution_time": 0.022564411163330078
+    },
+    {
+      "unique_id": "test.marginlens.unique_grain",
+      "status": "pass",
+      "execution_time": 0.021045207977294922
+    },
+    {
+      "unique_id": "test.marginlens.reference_parity",
+      "status": "pass",
+      "execution_time": 0.1640477180480957
+    }
+  ]
+}

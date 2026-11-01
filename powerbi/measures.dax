@@ -1,0 +1,16 @@
+// Import daily_finance.csv as DailyFinance. These measures preserve missing costs.
+Net Revenue = DIVIDE(SUM(DailyFinance[revenue_cents]), 100)
+
+Missing Cost Rows = SUM(DailyFinance[missing_cost_rows])
+
+Known Gross Profit = DIVIDE(SUM(DailyFinance[known_profit_cents]), 100)
+
+Gross Profit = IF([Missing Cost Rows] > 0, BLANK(), [Known Gross Profit])
+
+Gross Margin % = IF([Net Revenue] > 0, DIVIDE([Gross Profit], [Net Revenue]), BLANK())
+
+Potential Shortfall = DIVIDE(SUM(DailyFinance[potential_shortfall_cents]), 100)
+
+Contract Coverage % = DIVIDE(SUM(DailyFinance[matched_rows]), SUM(DailyFinance[line_count]))
+
+Gross Units Sold = SUM(DailyFinance[sale_units])

@@ -1,0 +1,28 @@
+version: 2
+models:
+  - name: dim_products
+    columns:
+      - name: product_id
+        data_tests: [unique, not_null]
+  - name: dim_stores
+    columns:
+      - name: store_id
+        data_tests: [unique, not_null]
+  - name: fct_sales
+    columns:
+      - name: transaction_id
+        data_tests: [not_null]
+      - name: revenue_cents
+        data_tests: [not_null]
+      - name: store_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_stores')
+                field: store_id
+      - name: product_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_products')
+                field: product_id

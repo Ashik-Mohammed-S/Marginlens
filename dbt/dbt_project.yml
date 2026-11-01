@@ -1,0 +1,9 @@
+name: marginlens
+version: '1.0.0'
+config-version: 2
+profile: marginlens
+model-paths: [models]
+test-paths: [tests]
+models:
+  marginlens:
+    +materialized: table
