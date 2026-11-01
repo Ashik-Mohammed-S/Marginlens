@@ -1,6 +1,6 @@
 # MarginLens
 
-Retail margin and contract intelligence: a guided analytics engineering and data science portfolio project.
+Retail margin and contract intelligence: an analytics engineering and data science portfolio project.
 
 ## Business question
 
@@ -15,8 +15,7 @@ Planned outputs: validated SQL marts, Power BI dashboard, exception investigatio
 ## Start here
 
 1. Read [the business and KPI contract](docs/01-business-contract.md).
-2. Complete [lesson 1](learning/01-grain-and-metrics.md).
-3. Track evidence in [PROGRESS.md](PROGRESS.md).
+2. Track evidence in [PROGRESS.md](PROGRESS.md).
 
 ## Planned stack
 
@@ -24,7 +23,7 @@ Python, SQL, DuckDB, dbt, Git, Power BI Desktop. Hosting and dependencies will b
 
 ## Working agreement
 
-Each learning milestone follows explain -> exercise -> implement -> verify -> reflect. Completed implementation and demonstrated understanding are tracked separately. Each GitHub issue should have acceptance criteria and evidence; pull requests describe business behavior and validation.
+GitHub tracks project deliverables, implementation, validation, and deployment only. Each GitHub issue should have acceptance criteria and evidence; pull requests describe business behavior and validation.
 
 ## Delivery gates
 
