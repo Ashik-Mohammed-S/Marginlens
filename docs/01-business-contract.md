@@ -1,4 +1,4 @@
-# Business and KPI contract - draft v0.1
+# Business and KPI contract - release 1.0
 
 ## Users and decisions
 
@@ -16,14 +16,14 @@ Fictional general-merchandise retailer; USD; sales tax excluded; no FX, rebates,
 - products: one product per product_id in v1.
 - stores: one store per store_id in v1.
 - contracts: one product/store agreed-price interval, with inclusive valid_from and exclusive valid_to. Overlapping applicable intervals are invalid.
-- dates: one calendar date.
-- cost records: one product cost interval, also non-overlapping. Matched cost is captured on the analytical transaction.
+- date: a calendar date on each source line and daily mart row; a separate date dimension is not required by the delivered web app.
+- costs: captured as a nullable unit cost on each source transaction. Generated returns carry the original sale cost. A separate cost-history table is not implemented in this release.
 
-Contract and cost joins must return at most one match per sales line. Missing matches remain visible as exceptions. Preserve unmatched lines in financial totals where values are available.
+Contract joins must return at most one matched price per sales line. Missing/ambiguous contract matches and missing captured costs remain visible as exceptions. Preserve unmatched lines in financial totals where values are available.
 
 ## Sign conventions and measures
 
-Use integer cents for money and positive quantity magnitudes with event_type SALE or RETURN. Signed quantity is positive for sales and negative for returns. Signed discounts are positive for sales and negative when reversing a discount on a return.
+Use integer cents for money and signed quantity with event_type SALE or RETURN. Quantity is positive for sales and negative for returns. Discounts are positive for sales and negative when reversing a discount on a return.
 
 - Gross sales amount = signed quantity * unit list price.
 - Net revenue = gross sales amount - signed discount amount; excludes sales tax.
@@ -39,14 +39,14 @@ If cost is missing, gross profit is unknown for that line. Report cost coverage;
 ## Acceptance criteria
 
 1. Exact reconciliation in integer cents on complete synthetic fixtures.
-2. Duplicate keys, overlapping intervals, missing costs, orphan returns, and late arrivals are surfaced.
+2. Duplicate keys, unknown dimensions, overlapping contracts, and missing costs/contracts are surfaced. The generated returns reference their original sale; late-arrival monitoring requires ingestion timestamps and is outside this fixed snapshot.
 3. Each exception has source identifiers, reason, relevant dates, and evidence.
 4. Dashboard measures agree with SQL reference queries.
 5. Forecast assessment uses historical cutoffs and compares against a baseline; improvement is not assumed.
 
-## Open decisions
+## Release decisions
 
-- Final synthetic dataset size and date range.
-- Attribution method for price-volume-mix-cost decomposition.
-- Materiality thresholds and review workflow.
-- Hosting destination and Power BI service availability.
+- Dataset: January 2025 through October 2026; six stores and nine products; deterministic seed 20261102.
+- Attribution: sequential volume, mix, price, cost, and separate returns; see docs/04-methodology.md.
+- Review: surface all positive eligible price differences; no materiality cutoff, approval workflow, or writeback in the demo.
+- Delivery: owner-private Sites web app. Power BI measures/theme/import guide are provided as a handoff kit; no Power BI service or PBIX is claimed.
