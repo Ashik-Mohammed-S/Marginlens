@@ -2,6 +2,10 @@
 
 **Retail margin and contract intelligence.** A reproducible, deployable analytics portfolio project using synthetic data.
 
+[Open the deployed app](https://marginlens-retail-finance.swoonysnipe19.chatgpt.site) · [Verified CI run](https://github.com/Ashik-Mohammed-S/Marginlens/actions/runs/41355087992) · [Release record](reports/RELEASE.md)
+
+The hosted application is owner-private and requires ChatGPT sign-in. Use Client briefing in its navigation for the presentation.
+
 ## What it does
 
 - Performance dashboard with month, region, and category filters.
