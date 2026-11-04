@@ -4,7 +4,15 @@
 
 [Open the deployed app](https://marginlens-retail-finance.swoonysnipe19.chatgpt.site) · [Verified CI run](https://github.com/Ashik-Mohammed-S/Marginlens/actions/runs/41355087992) · [Release record](reports/RELEASE.md)
 
-The hosted application is owner-private and requires ChatGPT sign-in. Use Client briefing in its navigation for the presentation.
+The hosted web dashboard is public. Use Client briefing in its navigation for the presentation.
+
+## Power BI dashboard preview
+
+![MarginLens Power BI pharmacy dashboard, filtered to 2024](docs/images/powerbi-pharmacy-dashboard.png)
+
+Actual Power BI Desktop screenshot, captured 4 November 2026. The native report has pharmacy economics and coverage/reconciliation pages, with year, quarter, state and utilization-type filters. Its aggregate model was derived from 11,960,653 accepted public Medicaid state records. The selected 2024 snapshot covers Q1–Q2 only; reimbursements are before rebates and are not pharmacy profit.
+
+This is a **static preview**, not an embedded Power BI Service report. The finished PBIX is delivered locally; online Power BI publication and scheduled cloud refresh remain pending. The public web app above is the separate synthetic retail demonstration.
 
 ## What it does
 
@@ -70,6 +78,6 @@ Five SQL models and 11 dbt tests validate the independent transformation against
 
 ## Boundaries
 
-This is a complete portfolio demonstration, not a production retailer integration. The static app has no live feed, scheduled refresh, data uploads, backend writes, regional authorization, or incident alert delivery. Hosting sign-in protects the deployed audience; filters do not enforce data access. Power BI Service and native PBIX execution are not part of the web deployment. See the client adoption gate before connecting confidential data.
+This is a complete portfolio demonstration, not a production retailer integration. The static app has no live feed, scheduled refresh, data uploads, backend writes, regional authorization, or incident alert delivery. The hosted demo is public; filters do not enforce data access. Power BI Service and native PBIX execution are not part of the web deployment. See the client adoption gate before connecting confidential data.
 
 GitHub tracks only implementation, validation, and deployment. [Project progress](PROGRESS.md).
